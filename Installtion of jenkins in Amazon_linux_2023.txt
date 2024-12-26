@@ -1,0 +1,51 @@
+Installtion of jenkins in Amazon_linux_2023
+
+1) - Install Java (Amazon Linux 2023):
+
+	sudo dnf install java-17-amazon-corretto -y
+
+2) - Ensure that your software packages are up to date on your instance by using the following command to perform a quick software update:
+
+ 	sudo yum update –y
+
+3) - Add the Jenkins repo using the following command:
+
+ sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+4) - Import a key file from Jenkins-CI to enable installation from the package:
+
+ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+ sudo yum upgrade
+
+5) - Install Jenkins:
+
+ sudo yum install jenkins -y
+
+6) - Enable the Jenkins service to start at boot:
+
+ sudo systemctl enable jenkins
+
+
+7) - Start Jenkins as a service:
+
+ sudo systemctl start jenkins
+
+8) - You can check the status of the Jenkins service using the command:
+
+ sudo systemctl status jenkins
+
+9) -  Open Web-Browser and access jenkins on port 8080.
+	http://<Public-IPv4-address>:8080/
+
+10) - cat /var/lib/jenkins/secrets/initialAdminPassword
+	# you will get the password.
+
+
+
+
+
+Link to the offical website :- https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/#downloading-and-installing-jenkins
+Additional Link to blog :- https://medium.com/@belek.bagishbekov/how-to-install-and-configure-jenkins-on-amazon-linux-2023-a8d7463a0404
+
