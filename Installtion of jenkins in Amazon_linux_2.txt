@@ -37,7 +37,7 @@ http://<Public-IPv4-address>:8080/
 
 Start Jenkins.
 # Become a root, no need to execute if you are alread root.
-'sudo su -'
+sudo su -
 
 # You can enable the Jenkins service to start at boot with the command:
 systemctl enable jenkins
